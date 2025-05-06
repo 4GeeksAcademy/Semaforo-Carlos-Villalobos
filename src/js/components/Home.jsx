@@ -1,28 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
+import Circulo from "./Logica.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-            
+  const [activoId, setActivoId] = useState(null);
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+  const clickEnCirculo = (id) => {
+    setActivoId(id); 
+  };
+
+  
+
+  return (
+    <div className="text-center row container">
+      <div className="col-12 bg-dark w-25 container d-flex flex-column align-items-center rounded-4 mt-4">
+        <div className="my-1">
+          <Circulo
+            id={1} 
+            isActive={activoId === 1} 
+            onClick={clickEnCirculo} 
+            Color="red"
+          />
+        </div>
+        <div className="my-1">
+          <Circulo
+            id={2}
+            isActive={activoId === 2}
+            onClick={clickEnCirculo}
+            Color="yellow"
+          />
+        </div>
+        <div className="my-1">
+          <Circulo
+            id={3}
+            isActive={activoId === 3}
+            onClick={clickEnCirculo}
+            Color="#08ed08"
+          />
+
+        </div>
+      </div>
+      <div className="col-12">
+      <button type="button" className="btn btn-primary" onClick={()=> { const randomColor = Math.floor(Math.random() * 3) + 1;
+            clickEnCirculo(randomColor); }}>Primary</button>
+      
+      </div>
+    </div>
+  );
 };
 
 export default Home;
