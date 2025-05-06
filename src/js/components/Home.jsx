@@ -41,7 +41,7 @@ const Home = () => {
       </div>
       <div className="col-12">
       <button type="button" className="btn btn-primary" onClick={()=> { const randomColor = Math.floor(Math.random() * 3) + 1;
-            clickEnCirculo(randomColor); }}>Primary</button>
+            clickEnCirculo(randomColor); }}>Colores Aleatorios</button>
       
       </div>
     </div>
