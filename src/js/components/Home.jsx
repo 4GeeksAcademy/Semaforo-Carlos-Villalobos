@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div className="text-center row container">
-      <div className="col-12 bg-dark w-25 container d-flex flex-column align-items-center rounded-4 mt-4">
+      <div className="col-12 bg-dark tamaño container d-flex flex-column align-items-center rounded-4 mt-4">
         <div className="my-1">
           <Circulo
             id={1} 

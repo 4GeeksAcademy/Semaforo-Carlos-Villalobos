@@ -9,8 +9,9 @@
   .image{
     background-image: url("https://contenidos.benidorm.org/sites/default/files/styles/wide_background/public/film_office_benidorm-_avenida_alfonso_puchades.jpg");
     background-color: black;
-    width: auto;
+    width: 100%;
     height: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
@@ -21,4 +22,28 @@
   .btn-purpura{
     background-color: blueviolet;
     color: white;
+  }
+
+  .tamaño{
+    width: 20%;
+  }
+
+  @media (max-width: 640px) {
+    .circulo {
+      width: 50px;
+    height:  50px;
+    }
+
+    .image{
+      background-image: url("https://contenidos.benidorm.org/sites/default/files/styles/wide_background/public/film_office_benidorm-_avenida_alfonso_puchades.jpg");
+      background-color: black;
+      width: 200px;
+      height: 700px;
+      background-repeat: no-repeat;
+    }
+
+    .tamaño{
+      width: 40%;
+      margin-left: 180px;
+    }
   }
